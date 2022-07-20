@@ -85,7 +85,7 @@ class Generator(nn.Module):
         self.conv1 = get_conv(3,64)
         self.conv2 = get_conv(64,64,lrelu=True)
         self.conv3 = get_conv(64,64,lrelu=True)
-        self.conv4 = Involution2d(64,3)
+        self.conv4 = get_conv(64,3)
 
         self.upsample = get_conv(64,64,lrelu=True)
 
